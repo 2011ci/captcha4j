@@ -62,7 +62,7 @@ public class CaptchaFilter implements Filter {
     |         C L A S S - M E T H O D S         |
     ============================================*/
 	
-	public boolean validate(String captcha, HttpSession session, boolean ignoreCase) {
+	public static boolean validate(String captcha, HttpSession session, boolean ignoreCase) {
 		String c = (String) session.getAttribute(CAPTCHA_SESSION_ATTR_NAME);
 		if (c == null) return false;
 		if (ignoreCase) {
